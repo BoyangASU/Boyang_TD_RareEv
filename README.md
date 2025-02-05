@@ -1,4 +1,4 @@
-# TD Moving Targte Problem
+# TD Moving Target Problem
 
 This project modifies the existing code for Continuous Monte Carlo (MC), Temporal Difference (TD) learning with TD(0), and TD(λ) algorithms.
 
