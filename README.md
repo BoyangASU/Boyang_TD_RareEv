@@ -1,6 +1,6 @@
-# Mean First Passage Time Estimation
+# TD Moving Targte Problem
 
-This project provides a set of tools for estimating the Mean First Passage Time (MFPT) in a discrete Markov chain using different methods: Monte Carlo (MC) simulation, Temporal Difference (TD) learning with TD(0), and TD(λ) algorithms.
+This project modifies the existing code for Continuous Monte Carlo (MC), Temporal Difference (TD) learning with TD(0), and TD(λ) algorithms.
 
 ## Overview
 
@@ -52,17 +52,11 @@ For more detailed examples, including how to run the estimations and compare the
 ### Generate Data 
 ### Compute Mean First Passage Time
 
-Here's an example of how to use `TD_mean.py` and compare Monte Carlo, TD(0), and TD(λ) methods:
+Here's an example of how to use `test.py` and compare Monte Carlo, TD(0), and TD(λ) methods:
 
 ``` python
-# Generate samples
-samples = mc_simulation.generate_samples(num_samples) 
-
-# Use samples to generate mc_results
-mc_results = monte_carlo_estimator_from_samples(samples, n)
-# Learn from samples
-td_results = td_estimator_from_samples(samples, n, alpha_TD, num_episodes_td)
-td_lambda_results = td_lambda_estimator_from_samples(samples, n, alpha_TD_lambda, num_episodes_lambda, lambd)
+python test.py
+python evaluate.py
 ```
 
 ## Results 
