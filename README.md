@@ -4,8 +4,8 @@ This project modifies the existing code for Continuous Monte Carlo (MC), Tempora
 
 ## Overview
 
-In Temporal Difference (TD) learning, each update uses the current estimate of the next state’s value $V(s')$ to form the target://
-$V(s) \leftarrow V(s)+\alpha[r+\gamma V(s')-V(s)]$
+In Temporal Difference (TD) learning, each update uses the current estimate of the next state’s value $V(s')$ to form the target:
+\math $V(s) \leftarrow V(s)+\alpha[r+\gamma V(s')-V(s)]$
 - **Discrete_MC.py**: Defines the `Discrete_MC` class, which is used to create a discrete Markov chain with a specified number of states. It includes methods for generating the transition matrix with non-uniform behavior and for generating sample trajectories from the Markov chain.
 
 - **methods.py**: Contains functions for estimating the MFPT using Monte Carlo simulation, TD(0), and TD(λ) from pre-generated samples of trajectories in the Markov chain.
