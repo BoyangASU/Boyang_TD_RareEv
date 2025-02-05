@@ -6,13 +6,16 @@ This project modifies the existing code for Continuous Monte Carlo (MC), Tempora
 
 In Temporal Difference (TD) learning, each update uses the current estimate of the next state’s value $V(s')$ to form the target:
 $V(s) \leftarrow V(s)+\alpha[r+\gamma V(s')-V(s)]$
+
 However, because $V(s')$ is produced by the same model being updated, the target $r+\gamma V(s')$ keeps changing as learning progresses. This creates non-stationary targets, often causing:
 
-- **Discrete_MC.py**: Defines the `Discrete_MC` class, which is used to create a discrete Markov chain with a specified number of states. It includes methods for generating the transition matrix with non-uniform behavior and for generating sample trajectories from the Markov chain.
+- **Instability**: The model “chases” its own shifting predictions, potentially oscillating or diverging.
 
-- **methods.py**: Contains functions for estimating the MFPT using Monte Carlo simulation, TD(0), and TD(λ) from pre-generated samples of trajectories in the Markov chain.
+- **Slower Convergence**: Learning efficiency degrades due to rapidly moving objectives.
 
-- **data_construction.py**: Utilizes the `Discrete_MC` class and functions from `methods.py` to construct data and compare the mean-based approaches for estimating MFPT.
+- **Inconsistent Estimates**: Value function updates can overestimate or underestimate, harming performance.
+  
+## Solutions
 
 ## Requirements
 
