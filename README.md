@@ -15,8 +15,15 @@ However, because $V(s')$ is produced by the same model being updated, the target
 
 - **Inconsistent Estimates**: Value function updates can overestimate or underestimate, harming performance.
   
-## Solutions
+## Solutions: Double (Target) Networks
+A double network (or target network) decouples the learning model from the target computation:
 
+- **Main Network**: Actively trained on current data (transitions).
+
+- **Target Network**: A lagged copy of the main network, updated periodically or slowly. This network alone computes $V(s')$.
+
+Because the target network updates more gradually, the target $r+\gamma V_{target}(s')$ remains relatively stable, reducing non-stationarity and improving overall training stability.
+ 
 ## Requirements
 
 - Python 3.x
