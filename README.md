@@ -62,15 +62,6 @@ This repository demonstrates how to train a Convolutional Neural Network (CNN) f
 - **Key Points**:
   - CNN parameters remain fixed (frozen), reducing computation and focusing on how effectively the linear head can learn.
   - Demonstrates advanced PyTorch functional APIs for more efficient batch-level updates.
-
-### Additional Modules
-
-- **`preprocessing.py`**  
-  Contains methods to load, clean, and prepare CMAPSS data. Functions like `prepare_data()`, `process_input_data_with_targets()`, and `process_targets()` handle data preprocessing and windowing.
-
-- **`train.py`**  
-  Defines the `RULDataset` class for PyTorch’s `DataLoader`. It may also contain supporting models such as `CNN1D` for baseline comparisons.
-
 ---
 
 ## Requirements
